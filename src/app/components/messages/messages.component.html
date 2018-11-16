@@ -1,0 +1,9 @@
+<ul>
+  <li *ngFor="let message of msg">
+    {{message.name}} : {{message.message.content}}
+  </li>
+</ul>
+
+<app-message-form></app-message-form>
+
+<a href="" routerLink="/private">show private</a>

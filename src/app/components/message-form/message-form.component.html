@@ -1,0 +1,9 @@
+<div class="message-form">
+  <form (ngSubmit)="send()" [formGroup]="messageForm">
+    <div>
+      <textarea formControlName="message" placeholder="Entrez votre message"></textarea>
+      <div *ngIf="messageCtrl.dirty && messageCtrl.hasError('required')">Message is required</div>
+    </div>
+    <button type="submit" [disabled]="messageForm.invalid">Envoyez</button>
+  </form>
+</div>

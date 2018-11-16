@@ -1,0 +1,7 @@
+<ul>
+  <li *ngFor="let message of msg | unique:'message.name'">
+    <a href="" (click)="loadMessage(message.name)">{{message.name}}</a>
+    <button (click)="loadMessage(message.name)">Click</button>
+  </li>
+</ul>
+<router-outlet></router-outlet>
